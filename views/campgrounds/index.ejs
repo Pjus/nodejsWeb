@@ -1,0 +1,37 @@
+<% layout('layouts/boilerplate') %> 
+<h1>Campgrounds</h1>
+<% for(let campground of campgrounds){ %>
+    <div class="card mb-3">
+        <div class="row">
+            <div class="col-md-4">
+                <% if(!campground.images[0]){ %>
+                    <img class="img-thumbnail" alt="" src="<%= noImage %>" style="height: 100%;">
+                <% } else { %> 
+                    <img class="img-thumbnail" alt="" src="<%= campground.images[0].url %>" style="height: 100%;">
+                <% } %> 
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h4 class="card-title"><%= campground.title %></h4>
+                    <h5 class="card-text"><%= campground.description %></h5>
+                    <p class="card-text">
+                        <small class="text-muted "><%= campground.location %></small>
+                    </p>
+                    <a href="campgrounds/<%= campground._id %>" class="btn btn-primary pull-right">View <%= campground.title %></a>
+                </div>
+            </div>
+        </div>
+    </div>
+<% } %> 
+<!-- <a href="/campgrounds/new">Add New Campground</a> -->
+
+
+<script>
+    $(window).scroll(function() {
+        if($(window).scrollTop() == $(document).height() - $(window).height()) {
+            // ajax call get data from server and append to the div
+            console.log("??")
+
+        }
+    });
+</script>

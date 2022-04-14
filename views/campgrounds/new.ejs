@@ -1,0 +1,61 @@
+<% layout('layouts/boilerplate') %> 
+<div class="row">
+    <h1 class="text-center">New Campground</h1>
+    <div class="col-6 offset-3">
+        <form action="/campgrounds" method="post" novalidate class="validate-form" enctype="multipart/form-data">
+            <div class="mb-3">
+                <label class="form-label" for="title">Camp Title</label>
+                <input class="form-control" type="text" name="campground[title]" id="title" placeholder="Camp Title" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="location">Camp Location</label>
+                <input class="form-control" type="text" name="campground[location]" id="location" placeholder="Camp location" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="price">Campground Price</label>
+                <div class="input-group">
+                    <span class="input-group-text" id="basic-addon1">$</span>
+                    <input type="number" id="price" name="campground[price]" class="form-control" placeholder="0.00" aria-label="price-label" aria-describedby="basic-addon1" required min="0">
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="description">Description</label>
+                <textarea class="form-control" type="text" name="campground[description]" id="description" placeholder="Camp description" required></textarea>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="image" class="form-label">Choose Image</label>
+                <input class="form-control myinput" type="file" name="image" id="image" name="image" multiple>
+            </div>
+
+            <div class="mb-3">
+                <button class="btn btn-success">Add campgorund</button>
+            </div>
+        </form>
+        <a href="/campgrounds">To List</a>
+    </div>
+</div>
+
+<script>
+    $('.myinput').change(function(){
+        if(this.files.length>10)
+            alert('Too many files')
+    });
+    // Prevent submission if limit is exceeded.
+    $('form').submit(function(){
+        if(this.files.length>10)
+            alert('Too many files')
+            return false;
+    });
+</script>

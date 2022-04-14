@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+
+    <link rel="stylesheet" type="text/css" href="/css/starability-fade.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/starability-all.css"/>
+    <link rel="stylesheet" type="text/css" href="/custom/Mystyle.css"/>
+    <link rel="stylesheet" type="text/css" href="/custom/map.css"/>
+
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+    <!-- Mapbox -->
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.css" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.js"></script>
+    
+    <title>Document</title>
+
+</head>
+<body class="d-flex flex-column vh-100 col-md-8 mx-auto">
+    <%- include("../partial/navbar") %> 
+    <main class="container mt-5 mb-5">
+        <%- include("../partial/flash") %> 
+        <%- body %> 
+        <button
+                type="button"
+                class="btn btn-dark btn-floating btn-lg"
+                id="btn-back-to-top"
+                >
+            <i class="bi bi-arrow-up"></i>
+        </button>
+    </main>
+
+    <%- include("../partial/footer") %> 
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="/js/vaildateForm.js"></script>
+    <script src="/js/toTop.js"></script>
+</body>
+
+</html>
