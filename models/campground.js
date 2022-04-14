@@ -11,9 +11,15 @@ ImageSchema.virtual("thumbnail").get(function(){
     return this.url.replace('/upload', '/upload/w_200,h_200');
 });
 
+ImageSchema.virtual("listImage").get(function(){
+    return this.url.replace('/upload', '/upload/w_500,h_500');
+});
+
 ImageSchema.virtual("showImage").get(function(){
     return this.url.replace('/upload', '/upload/ar_1,c_crop');
 });
+
+
 
 const CampgroundSchema = new Schema({
     title:String,
