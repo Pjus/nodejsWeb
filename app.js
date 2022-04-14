@@ -71,7 +71,7 @@ const sessionConfig = {
         httpOnly: true,
         // secure:true,
         expires: Date.now(),
-        maxAge: 2 * 60 * 60 * 1000
+        maxAge: 2 * 60 * 60 * 100
     }
 };
 
