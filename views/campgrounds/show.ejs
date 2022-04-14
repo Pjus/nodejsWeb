@@ -10,7 +10,7 @@
     <div class="card mb-3">
         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
           <div class="carousel-inner">
-            <% if(!campground.images[0]){ %>
+            <% if(campground.images.length > 0){ %>
               <% campground.images.forEach((img, i) => {%>
                 <div class="carousel-item">
                   <img src="<%= img.showImage %>" class="d-block w-100" alt="<%= img.filename %> ">
