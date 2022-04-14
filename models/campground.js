@@ -12,7 +12,7 @@ ImageSchema.virtual("thumbnail").get(function(){
 });
 
 ImageSchema.virtual("listImage").get(function(){
-    return this.url.replace('/upload', '/upload/w_500,h_500');
+    return this.url.replace('/upload', '/upload/ar_1.5,c_crop');
 });
 
 ImageSchema.virtual("showImage").get(function(){
